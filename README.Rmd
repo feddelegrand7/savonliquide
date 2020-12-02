@@ -36,6 +36,66 @@ remotes::install_github("feddelegrand7/savonliquide")
 ## Example
 
 
-This is a button A: 
+The following plot is awful in terms of color contrast. The two main colors used are : `#FDF6E3` (for points) and `#C6F6E3"` for the background.
 
-<button> click here </button>
+```{r}
+
+library(ggplot2)
+
+ggplot(mpg, aes(hwy, cty)) +
+  geom_point(color = "#FDF6E3") +
+  theme(panel.background = element_rect(fill = "#C6F6E3"))
+
+
+
+```
+
+
+Let's check the contrast: 
+
+
+```{r}
+library(savonliquide)
+# fg_col stands for foreground color 
+# bg_col stands for background color
+
+
+check_contrast(fg_col = "#FDF6E3", 
+               bg_col = "#C6F6E3")
+
+
+```
+
+You can see that the report indicates that we've a very low Contrast Ratio and that we've failed all the recommended standards (In the web development industry we consider mostly the AA standard). 
+
+
+Now let's experiment other colors combinations. Let's go for: 
+
++ Foreground color: #0000FF
+
++ Background color: #FFFFFF
+
+
+```{r}
+
+check_contrast(fg_col = "#0000FF", 
+               bg_col = "#FFFFFF")
+
+
+```
+Awesome ! we've got an excellent Contrast Ratio and we've passed all the accessibility standards. Let's use the above colors to render our plot again: 
+
+
+```{r}
+
+ggplot(mpg, aes(hwy, cty)) +
+  geom_point(color = "#0000FF") +
+  theme(panel.background = element_rect(fill = "#FFFFFF"))
+
+
+
+```
+
+## Code of Conduct
+
+Please note that the savonliquide project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

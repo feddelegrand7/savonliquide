@@ -99,6 +99,36 @@ ggplot(mpg, aes(hwy, cty)) +
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
+### check\_contrast\_raw()
+
+The `check_contrast_raw()` function allows you to get the same
+information but in a raw format. To be more precise, you get a `list`
+object.
+
+``` r
+check_contrast_raw(fg_col = "#0000FF", bg_col = "#FFFFFF")
+#> $ratio
+#> [1] "8.59"
+#> 
+#> $AA
+#> [1] "pass"
+#> 
+#> $AALarge
+#> [1] "pass"
+#> 
+#> $AAA
+#> [1] "pass"
+#> 
+#> $AAALarge
+#> [1] "pass"
+```
+
+``` r
+paste0("This is a good Contrast Ratio ", 
+       check_contrast_raw(fg_col = "#0000FF", bg_col = "#FFFFFF")$ratio)
+#> [1] "This is a good Contrast Ratio 8.59"
+```
+
 ## Code of Conduct
 
 Please note that the savonliquide project is released with a

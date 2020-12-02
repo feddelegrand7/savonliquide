@@ -8,6 +8,7 @@ Authors@R:
            email = "ihaddaden.fodeil@gmail.com")
 Description: Allows the user to generate a report from the Contrast Checker API.
   The report generates a contrast ratio that will be useful when considering colors accessibility.
+  Fore more info see <https://webaim.org/resources/contrastchecker/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -15,3 +16,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
     testthat
+URL: https://github.com/feddelegrand7/savonliquide
+BugReports: https://github.com/feddelegrand7/savonliquide/issues

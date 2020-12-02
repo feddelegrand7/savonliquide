@@ -21,7 +21,7 @@
 check_contrast <- function(fg_col, bg_col){
 
 # We need to be sure that the user provide valid HEX colors
-# here we focus on the minimum length which is
+# here we focus on the minimum length (nchar) which is
 # 4 if # is included or 3 if # is not included
 
 

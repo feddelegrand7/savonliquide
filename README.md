@@ -6,11 +6,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-`savonliquide` allows you to generate a report from the [Contrast
-Checker API](https://webaim.org/resources/contrastchecker/). The report
-will display a contrast ratio (that should be above a threshold among)
-other useful information that will judge the accessibility level of your
-colors contrast.
+`savonliquide` is a tiny package that allows you to generate a report
+from the [Contrast Checker
+API](https://webaim.org/resources/contrastchecker/). The report will
+display a contrast ratio among other useful information that will judge
+the accessibility level of your color contrast. `savonliquide` can be
+used to evaluate color contrast accessibility for plots, RMarkdown
+documents, Shiny Apps and even for the RStudio IDE theme (for teaching
+situations).
 
 ## Installation
 

@@ -20,13 +20,52 @@
 
 check_contrast <- function(fg_col, bg_col){
 
+# We need to be sure that the user provide valid HEX colors
+# here we focus on the minimum length which is
+# 4 if # is included or 3 if # is not included
+
+
+if(grepl(pattern = "#", x = fg_col) && nchar(fg_col) < 4){
+
+   stop("invalid color provided in fg_color, please use valid HEX colors")
+
+}
+
+if(!grepl(pattern = "#", x = fg_col) && nchar(fg_col) < 3){
+
+   stop("invalid color provided in fg_color, few characters provided")
+
+}
+
+
+# Same stuff (copy and paste) for bg_col
+
+
+if(grepl(pattern = "#", x = bg_col) && nchar(bg_col) < 4){
+
+      stop("invalid color provided in bg_col, please use valid HEX colors")
+
+}
+
+if(!grepl(pattern = "#", x = bg_col) && nchar(bg_col) < 3){
+
+      stop("invalid color provided in bg_col, few characters provided")
+
+}
+
+
+# The API doesn't take into account the # so let's remove it.
+
+fg_col <- gsub(pattern = "#", replacement = "", x = fg_col)
+
+bg_col <- gsub(pattern = "#", replacement = "", x = bg_col)
+
+
+
 tryCatch(
 
   expr = {
 
-   fg_col <- gsub(pattern = "#", replacement = "", x = fg_col)
-
-   bg_col <- gsub(pattern = "#", replacement = "", x = bg_col)
 
    # Getting the response from the API. Here I use the glue package so that we
    # can interpolate the arguments (fg_col and bg_col) into the API call.
@@ -44,7 +83,7 @@ tryCatch(
    # in conjunction with crayon to print out a nice
    # formatted and colorized text output to the console.
 
-   glue::glue("
+   return(glue::glue("
 
 * The Contrast Ratio is {crayon::bold(text$ratio)}
 
@@ -62,7 +101,7 @@ tryCatch(
 
 "
 
-)},
+))},
 
 
   error = function(cond){

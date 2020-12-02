@@ -15,9 +15,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
-    testthat
+    testthat,
+    spelling
 URL: https://github.com/feddelegrand7/savonliquide
 BugReports: https://github.com/feddelegrand7/savonliquide/issues
 Imports: 
     glue,
-    httr
+    httr,
+    crayon
+Language: en-US

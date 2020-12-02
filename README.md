@@ -6,46 +6,25 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of savonliquide is to …
+`savonliquide` allows you to generate a report from the [Contrast
+Checker API](https://webaim.org/resources/contrastchecker/). The report
+will display a contrast ratio (that should be above a threshold among)
+other useful information that will judge the accessibility level of your
+colors contrast.
 
 ## Installation
 
-You can install the released version of savonliquide from
+You can install the released version of `savonliquide` from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("savonliquide")
+remotes::install_github("feddelegrand7/savonliquide")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a button A:
 
-``` r
-library(savonliquide)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub!
+<button>
+click here
+</button>

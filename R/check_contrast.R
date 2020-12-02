@@ -1,4 +1,23 @@
 
+#' Color Contrast Accessibility Report
+#'
+#' @description returns a report from the Contrast Checker API about color contrast for accessibility
+#'
+#' @param fg_col the Foreground Color
+#' @param bg_col the Background Color
+#'
+#' @return Color Contrast Report
+#' @export
+#'
+#' @examples
+#'
+#' check_contrast(fg_col = "#21EA06", bg_col = "#483D3D")
+#'
+#'
+
+
+
+
 check_contrast <- function(fg_col, bg_col){
 
 tryCatch(

@@ -6,9 +6,9 @@ Authors@R:
            family = "Ihaddaden",
            role = c("aut", "cre"),
            email = "ihaddaden.fodeil@gmail.com")
-Description: Allows the user to generate a report from the 'Contrast Checker API'.
+Description: Allows the user to generate a report from the 'Contrast Checker' API.
   The report generates a contrast ratio that will be useful when considering colors accessibility.
-  Fore more info see <https://webaim.org/resources/contrastchecker/>.
+  For more info see <https://webaim.org/resources/contrastchecker/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

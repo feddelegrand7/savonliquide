@@ -4,6 +4,7 @@
 # savonliquide
 
 <!-- badges: start -->
+
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/savonliquide)](https://cran.r-project.org/package=savonliquide)
 [![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/savonliquide)](https://cran.r-project.org/package=savonliquide)
 [![metacran
@@ -31,7 +32,6 @@ You can install the released version of `savonliquide` from
 
 ``` r
 install.packages("savonliquide")
-
 ```
 
 ## Example

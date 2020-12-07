@@ -4,6 +4,15 @@
 # savonliquide
 
 <!-- badges: start -->
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/savonliquide)](https://cran.r-project.org/package=savonliquide)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/savonliquide)](https://cran.r-project.org/package=savonliquide)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/savonliquide)](https://cran.r-project.org/package=savonliquide)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/savonliquide)](https://cran.r-project.org/package=savonliquide)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/savonliquide)
 <!-- badges: end -->
 
 `savonliquide` is a tiny package that allows you to generate a report

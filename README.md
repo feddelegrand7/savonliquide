@@ -30,7 +30,8 @@ You can install the released version of `savonliquide` from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-remotes::install_github("feddelegrand7/savonliquide")
+install.packages("savonliquide")
+
 ```
 
 ## Example

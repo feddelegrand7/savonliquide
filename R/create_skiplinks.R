@@ -1,11 +1,14 @@
 
 
-#' Title
+#' Transfrom an HTML element to a Skip Link
 #'
-#' @param text text displayed in the anchor
-#' @param skip_to the html element to skip to
+#' @param element the element to use as a Skip Link
+#' @param skip_to the HTML element to skip to
+#' @param bg_color the background color of the element to use as a Skip Link
+#' @param col the color of the element to use as a Skip Link
 #'
-#' @return
+#'
+#' @return a Skip Link HTML element
 #' @export
 #'
 #' @examples
@@ -39,6 +42,7 @@ to_skiplinks <- function(element,
       padding: 8px;
       z-index: 9999;
       border-radius: 10px;
+      font-weight: bold;
       }}
 
       #{htmltools::tagGetAttribute(element, attr = 'id')}:focus {{

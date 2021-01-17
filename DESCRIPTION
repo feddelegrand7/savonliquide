@@ -1,5 +1,5 @@
 Package: savonliquide
-Title: Check for Color Contrast Accessibility 
+Title: Accessibility Features in R
 Version: 0.1.0
 Authors@R: 
     person(given = "Mohamed El Fodil",

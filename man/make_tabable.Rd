@@ -4,10 +4,10 @@
 \alias{make_tabable}
 \title{Make HTML elements tabable}
 \usage{
-make_tabable(elements, tab_index = 0)
+make_tabable(element, tab_index = 0)
 }
 \arguments{
-\item{elements}{the HTML elements to be tabable (if not by default)}
+\item{element}{the HTML element to be tabable (if not by default)}
 
 \item{tab_index}{takes either 0, a negative or a positive value according to the required state of the element.
 0 will make the element tabable with its relative order defined by the platform convention.
@@ -19,4 +19,25 @@ a tabable HTML element
 }
 \description{
 Make HTML elements tabable
+}
+\examples{
+
+if (interactive()) {
+
+
+ui <- fluidPage(
+
+textInput(inputId = "inp1", label = "input"),
+
+   div(h1("Not tabable")) \%>\%
+       make_tabable(tab_index = -1),
+   div(h2("Tabable ! with priority")) \%>\%
+       make_tabable(tab_index = 1),
+   div(h2("Simply Tabable")) \%>\%
+       make_tabable(tab_index = 0))
+server <- function(input, output, session) {}
+
+shinyApp(ui = ui, server = server)
+
+}
 }

@@ -20,14 +20,15 @@ to_skiplinks <- function(element,
 
 
 
-  tagList(
+
+  htmltools::tagList(
 
     htmltools::tagAppendAttributes(
       element,
       href = skip_to
     ),
 
-    htmltools::tags$head(tags$style(glue::glue(
+    htmltools::tags$head(htmltools::tags$style(glue::glue(
 
       "
       #{htmltools::tagGetAttribute(element, attr = 'id')} {{

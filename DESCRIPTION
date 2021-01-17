@@ -22,5 +22,6 @@ BugReports: https://github.com/feddelegrand7/savonliquide/issues
 Imports: 
     glue,
     httr,
-    crayon
+    crayon,
+    magrittr
 Language: en-US

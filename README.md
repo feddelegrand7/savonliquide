@@ -14,6 +14,8 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/savonliquide)](https://
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/savonliquide)
+[![R build
+status](https://github.com/feddelegrand7/savonliquide/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/savonliquide/actions)
 <!-- badges: end -->
 
 `savonliquide` is a tiny package that allows you to generate a report
@@ -42,6 +44,7 @@ background.
 
 ``` r
 library(ggplot2)
+#> Warning: package 'ggplot2' was built under R version 4.0.3
 
 ggplot(mpg, aes(hwy, cty)) +
   geom_point(color = "#FDF6E3") +

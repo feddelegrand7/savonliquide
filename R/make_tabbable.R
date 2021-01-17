@@ -15,31 +15,30 @@
 #' @examples
 #'
 #' if (interactive()) {
+#'   ui <- fluidPage(
+#'     textInput(inputId = "inp1", label = "input"),
 #'
+#'     div(h1("Not tabable")) %>%
+#'       make_tabable(tab_index = -1),
+#'     div(h2("Tabable ! with priority")) %>%
+#'       make_tabable(tab_index = 1),
+#'     div(h2("Simply Tabable")) %>%
+#'       make_tabable(tab_index = 0)
+#'   )
 #'
-#'ui <- fluidPage(
+#'   server <- function(input, output, session) {}
 #'
-#'textInput(inputId = "inp1", label = "input"),
-#'
-#'    div(h1("Not tabable")) %>%
-#'        make_tabable(tab_index = -1),
-#'    div(h2("Tabable ! with priority")) %>%
-#'        make_tabable(tab_index = 1),
-#'    div(h2("Simply Tabable")) %>%
-#'        make_tabable(tab_index = 0))
-#'server <- function(input, output, session) {}
-#'
-#'shinyApp(ui = ui, server = server)
-#'
+#'   shinyApp(ui = ui, server = server)
 #' }
-
-
-
 make_tabable <- function(element, tab_index = 0) {
+
+  if(tab_index > 32767) {
+
+    stop("tab_index maximum value is 32767")
+
+  }
 
   tab_index <- as.character(tab_index)
 
-  htmltools::tagAppendAttributes(elements, `tabindex` = tab_index)
-
-
+  htmltools::tagAppendAttributes(element, `tabindex` = tab_index)
 }

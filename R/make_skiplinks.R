@@ -13,7 +13,7 @@
 #'
 #' @examples
 
-to_skiplinks <- function(element,
+make_skiplinks <- function(element,
                          skip_to,
                          bg_color = "#212121",
                          col = "#F2F2F2") {

@@ -2,15 +2,17 @@
 % Please edit documentation in R/create_invisible_anchor.R
 \name{create_invisible_anchor}
 \alias{create_invisible_anchor}
-\title{Make an element invisible}
+\title{Create an HTML invisible anchor}
 \usage{
 create_invisible_anchor(id, text, href = NULL)
 }
 \arguments{
-\item{element}{the element to make invisible}
+\item{id}{id of the anchor}
+
+\item{text}{text of the anchor}
 }
 \value{
-an invisible HTML element
+an invisible HTML anchor element
 }
 \description{
 Make an element invisible so that it can only be read

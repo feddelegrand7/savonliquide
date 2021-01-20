@@ -31,11 +31,8 @@
 #'   shinyApp(ui = ui, server = server)
 #' }
 make_tabable <- function(element, tab_index = 0) {
-
-  if(tab_index > 32767) {
-
+  if (tab_index > 32767) {
     stop("tab_index maximum value is 32767")
-
   }
 
   tab_index <- as.character(tab_index)

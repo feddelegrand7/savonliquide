@@ -14,51 +14,42 @@
 #' @examples
 #'
 #' if (interactive()) {
+#'   ui <- fluidPage(
+#'     tags$a("do you want to be redirected to google.com ?",
+#'       id = "skip-link"
+#'     ) %>%
+#'       make_skiplinks(
+#'         skip_to = "https://google.com",
+#'         bg_color = "red",
+#'         col = "white"
+#'       ),
 #'
+#'     h1("accessibility is not a detail")
+#'   )
 #'
-#'ui <- fluidPage(
+#'   server <- function(input, output, session) {}
 #'
-#'    tags$a("do you want to be redirected to google.com ?",
-#'           id = "skip-link") %>%
-#'           make_skiplinks(skip_to = "https://google.com",
-#'           bg_color = "red",
-#'           col = "white"),
-#'
-#'    h1("accessibility is not a detail")
-#'
-#'    )
-#'
-#'server <- function(input, output, session){}
-#'
-#'shinyApp(ui, server)
-#'
+#'   shinyApp(ui, server)
 #' }
-
 make_skiplinks <- function(element,
                            skip_to,
                            bg_color = "#002240",
                            col = "#FFFFFF") {
-
-
-
   if (any(missing(element), missing(skip_to))) {
-
     stop("'element' and 'skip_to' are mondatory parameters")
-
   }
 
-  if (!all(is.character(skip_to),
-           is.character(bg_color),
-           is.character(col))) {
-
+  if (!all(
+    is.character(skip_to),
+    is.character(bg_color),
+    is.character(col)
+  )) {
     stop("'skip_to', 'bg_color', 'col' must be provided as character strings")
-
   }
 
   id <- htmltools::tagGetAttribute(element, attr = "id")
 
   if (is.null(id)) {
-
     stop("the element must have an ID attribute")
   }
 
@@ -70,7 +61,6 @@ make_skiplinks <- function(element,
     ),
 
     htmltools::tags$head(htmltools::tags$style(glue::glue(
-
       "
       #{id} {{
       position: absolute;
@@ -86,5 +76,6 @@ make_skiplinks <- function(element,
       top: 0;
       }}
       "
-    ))))
+    )))
+  )
 }

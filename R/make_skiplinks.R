@@ -1,6 +1,6 @@
 
 
-#' Transfrom an HTML element to a Skip Link
+#' Transform an HTML element to a Skip Link
 #'
 #' @param element the element to use as a Skip Link
 #' @param skip_to the HTML element to skip to
@@ -14,15 +14,35 @@
 #' @examples
 
 make_skiplinks <- function(element,
-                         skip_to,
-                         bg_color = "#212121",
-                         col = "#F2F2F2") {
+                           skip_to,
+                           bg_color = "#002240",
+                           col = "#FFFFFF") {
 
 
+  id <- htmltools::tagGetAttribute(element, attr = "id")
 
+
+  if (any(missing(element), missing(skip_to))) {
+
+    stop("'element' and 'skip_to' are mondatory parameters")
+
+  }
+
+
+  if (!all(is.character(skip_to),
+           is.character(bg_color),
+           is.character(col))) {
+
+    stop("'skip_to', 'bg_color', 'col' must be provided as character strings")
+
+  }
+
+  if (is.null(id)) {
+
+    stop("the element must have an ID attribute")
+  }
 
   htmltools::tagList(
-
     htmltools::tagAppendAttributes(
       element,
       href = skip_to
@@ -31,35 +51,23 @@ make_skiplinks <- function(element,
     htmltools::tags$head(htmltools::tags$style(glue::glue(
 
       "
-      #{htmltools::tagGetAttribute(element, attr = 'id')} {{
-
+      #{id} {{
       position: absolute;
-      height: 30px;
-      left: 50%;
-      transform: translateY(-100%);
-      transition: transform 0.3s;
+      top: -40px;
+      left: 0;
       background: {bg_color};
       color: {col};
       padding: 8px;
       z-index: 9999;
-      border-radius: 10px;
-      font-weight: bold;
       }}
 
-      #{htmltools::tagGetAttribute(element, attr = 'id')}:focus {{
-
-      transform: translateY(0%)
-
+      #{id}:focus {{
+      top: 0;
       }}
 
       "
 
-
-    )))
-
-
-
-  )
+    ))))
 
 
 }

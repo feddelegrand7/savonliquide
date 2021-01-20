@@ -2,9 +2,9 @@
 % Please edit documentation in R/make_skiplinks.R
 \name{make_skiplinks}
 \alias{make_skiplinks}
-\title{Transfrom an HTML element to a Skip Link}
+\title{Transform an HTML element to a Skip Link}
 \usage{
-make_skiplinks(element, skip_to, bg_color = "#212121", col = "#F2F2F2")
+make_skiplinks(element, skip_to, bg_color = "#002240", col = "#FFFFFF")
 }
 \arguments{
 \item{element}{the element to use as a Skip Link}
@@ -19,5 +19,5 @@ make_skiplinks(element, skip_to, bg_color = "#212121", col = "#F2F2F2")
 a Skip Link HTML element
 }
 \description{
-Transfrom an HTML element to a Skip Link
+Transform an HTML element to a Skip Link
 }

@@ -12,6 +12,10 @@
 
 make_invisible <- function(element) {
 
+  if (is.null(htmltools::tagGetAttribute(element, attr = 'id'))) {
+    stop("you need to provide an ID attribute to the element")
+  }
+
   tagList(
     element,
     htmltools::tags$head(htmltools::tags$style(glue::glue(

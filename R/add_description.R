@@ -89,3 +89,41 @@ add_description <- function(element,
     )
   }
 }
+
+
+
+
+#' Describe an HTML element by another one
+#'
+#' @param element the HTML element to describe
+#' @param descID the ID of the HTML that will be used to describe the 'element'
+#'
+#' @return an HTML element described by another HTML element
+#' @export
+#'
+#' @examples
+#'
+#'
+#'
+
+describe_using <- function(element, descID) {
+
+  if (!is.character(descID)) {
+
+    stop("'descID' parameter must be provided as a character string")
+
+  }
+
+  if (grepl("#", descID, fixed = TRUE)) {
+
+    stop("please do not append the descID argument with a '#'")
+
+  }
+
+
+  htmltools::tagAppendAttributes(
+    element,
+    "aria-describedby" = descID
+
+  )
+}

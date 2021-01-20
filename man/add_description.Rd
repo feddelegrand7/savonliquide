@@ -26,24 +26,36 @@ ui <- fluidPage(
   # use Tab and Shift + Tab to navigate between the buttons
   # and see the difference
 
-  actionButton(inputId = "inp1",
-               label = "button"),
-  actionButton(inputId = "inp2",
-               label = "button"),
-  actionButton(inputId = "inp3",
-               label = "button"),
-  actionButton(inputId = "inp4",
-               label = "button"),
-  actionButton(inputId = "inp5",
-               label = "button") \%>\%
-    add_description(description = "hello this is a button
+  actionButton(
+    inputId = "inp1",
+    label = "button"
+  ),
+  actionButton(
+    inputId = "inp2",
+    label = "button"
+  ),
+  actionButton(
+    inputId = "inp3",
+    label = "button"
+  ),
+  actionButton(
+    inputId = "inp4",
+    label = "button"
+  ),
+  actionButton(
+    inputId = "inp5",
+    label = "button"
+  ) \%>\%
+    add_description(
+      description = "hello this is a button
                    when you click it you'll have a
                    thing, when you don't click it you'll
                    have another thing",
-                   descID = "chkoup")
+      descID = "chkoup"
+    )
 )
 
-server <- function(input, output, session){}
+server <- function(input, output, session) {}
 
 shinyApp(ui, server)
 }

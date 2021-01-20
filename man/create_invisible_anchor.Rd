@@ -10,6 +10,8 @@ create_invisible_anchor(id, text, href = NULL)
 \item{id}{id of the anchor}
 
 \item{text}{text of the anchor}
+
+\item{href}{of the anchor. Defaults to NULL.}
 }
 \value{
 an invisible HTML anchor element

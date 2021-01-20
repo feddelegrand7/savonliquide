@@ -24,23 +24,21 @@ Transform an HTML element to a Skip Link
 \examples{
 
 if (interactive()) {
+  ui <- fluidPage(
+    tags$a("do you want to be redirected to google.com ?",
+      id = "skip-link"
+    ) \%>\%
+      make_skiplinks(
+        skip_to = "https://google.com",
+        bg_color = "red",
+        col = "white"
+      ),
 
+    h1("accessibility is not a detail")
+  )
 
-ui <- fluidPage(
+  server <- function(input, output, session) {}
 
-   tags$a("do you want to be redirected to google.com ?",
-          id = "skip-link") \%>\%
-          make_skiplinks(skip_to = "https://google.com",
-          bg_color = "red",
-          col = "white"),
-
-   h1("accessibility is not a detail")
-
-   )
-
-server <- function(input, output, session){}
-
-shinyApp(ui, server)
-
+  shinyApp(ui, server)
 }
 }

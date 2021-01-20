@@ -4,7 +4,7 @@
 #'
 #' @param id id of the anchor
 #' @param text text of the anchor
-#' @href href of the anchor. Defaults to NULL.
+#' @param href of the anchor. Defaults to NULL.
 #' @description Make an element invisible so that it can only be read
 #' by screen readers
 #' @return an invisible HTML anchor element

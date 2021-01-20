@@ -40,7 +40,6 @@ make_skiplinks <- function(element,
                            col = "#FFFFFF") {
 
 
-  id <- htmltools::tagGetAttribute(element, attr = "id")
 
   if (any(missing(element), missing(skip_to))) {
 
@@ -60,6 +59,8 @@ make_skiplinks <- function(element,
 
     stop("the element must have an ID attribute")
   }
+
+  id <- htmltools::tagGetAttribute(element, attr = "id")
 
   htmltools::tagList(
     htmltools::tagAppendAttributes(

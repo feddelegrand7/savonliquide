@@ -23,6 +23,5 @@ Imports:
     glue,
     httr,
     crayon,
-    magrittr,
     htmltools
 Language: en-US

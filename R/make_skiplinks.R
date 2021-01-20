@@ -55,12 +55,13 @@ make_skiplinks <- function(element,
 
   }
 
+  id <- htmltools::tagGetAttribute(element, attr = "id")
+
   if (is.null(id)) {
 
     stop("the element must have an ID attribute")
   }
 
-  id <- htmltools::tagGetAttribute(element, attr = "id")
 
   htmltools::tagList(
     htmltools::tagAppendAttributes(

@@ -12,6 +12,27 @@
 #' @export
 #'
 #' @examples
+#'
+#' if (interactive()) {
+#'
+#'
+#'ui <- fluidPage(
+#'
+#'    tags$a("do you want to be redirected to google.com ?",
+#'           id = "skip-link") %>%
+#'           make_skiplinks(skip_to = "https://google.com",
+#'           bg_color = "red",
+#'           col = "white"),
+#'
+#'    h1("accessibility is not a detail")
+#'
+#'    )
+#'
+#'server <- function(input, output, session){}
+#'
+#'shinyApp(ui, server)
+#'
+#' }
 
 make_skiplinks <- function(element,
                            skip_to,
@@ -21,13 +42,11 @@ make_skiplinks <- function(element,
 
   id <- htmltools::tagGetAttribute(element, attr = "id")
 
-
   if (any(missing(element), missing(skip_to))) {
 
     stop("'element' and 'skip_to' are mondatory parameters")
 
   }
-
 
   if (!all(is.character(skip_to),
            is.character(bg_color),
@@ -64,10 +83,6 @@ make_skiplinks <- function(element,
       #{id}:focus {{
       top: 0;
       }}
-
       "
-
     ))))
-
-
 }

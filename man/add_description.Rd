@@ -22,6 +22,8 @@ an HTML element with a description attached to it
 Add a description to an HTML element
 }
 \examples{
+
+if (interactive()) {
 ui <- fluidPage(
   # use Tab and Shift + Tab to navigate between the buttons
   # and see the difference
@@ -58,4 +60,5 @@ ui <- fluidPage(
 server <- function(input, output, session) {}
 
 shinyApp(ui, server)
+}
 }

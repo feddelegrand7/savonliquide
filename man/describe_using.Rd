@@ -18,7 +18,32 @@ an HTML element described by another HTML element
 Describe an HTML element by another one
 }
 \examples{
+if (interactive()) {
+ui <- fluidPage(
+  # use Tab and Shift + Tab to navigate between the buttons
+  # and see the difference
 
+  actionButton(inputId = "inp1",
+               label = "button"),
+  actionButton(inputId = "inp2",
+               label = "button"),
 
+  actionButton(inputId = "inp3",
+               label = "button") \%>\%
+    describe_using(descID = "descriptor"), # it's happening here
 
+  actionButton(inputId = "inp4",
+               label = "button"),
+  actionButton(inputId = "inp5",
+               label = "button"),
+
+  div(id = "descriptor",
+      "button 3 is just amazing! click on it!!!")
+)
+
+server <- function(input, output, session){}
+
+shinyApp(ui, server)
+
+}
 }

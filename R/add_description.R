@@ -56,7 +56,7 @@ add_description <- function(element,
                             description,
                             visible = FALSE) {
   if (!visible) {
-    tagList(
+    htmltools::tagList(
       htmltools::tagAppendAttributes(
         element,
         "aria-describedby" = descID
@@ -80,7 +80,7 @@ add_description <- function(element,
       )))
     )
   } else {
-    tagList(
+    htmltools::tagList(
       htmltools::tagAppendAttributes(
         element,
         "aria-describedby" = descID

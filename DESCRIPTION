@@ -21,7 +21,5 @@ URL: https://github.com/feddelegrand7/savonliquide
 BugReports: https://github.com/feddelegrand7/savonliquide/issues
 Imports: 
     glue,
-    httr,
-    crayon,
     htmltools
 Language: en-US

@@ -20,7 +20,7 @@ create_invisible_anchor <- function(id, text, href = NULL) {
     href
   }
 
-  tagList(
+  htmltools::tagList(
     make_tabable(htmltools::tags$a(text, id = id, href = href)),
 
     htmltools::tags$head(htmltools::tags$style(glue::glue(

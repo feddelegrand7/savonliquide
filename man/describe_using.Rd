@@ -28,30 +28,30 @@ if (interactive()) {
     h2("Using a screen reader
         hit Tab and Shift + Tab to
         navigate between the buttons
-        and check for the difference"),
+        and stop at button 3 to see the difference"),
 
     actionButton(
       inputId = "inp1",
-      label = "button"
+      label = "button 1"
     ),
     actionButton(
       inputId = "inp2",
-      label = "button"
+      label = "button 2"
     ),
 
     actionButton(
       inputId = "inp3",
-      label = "button"
+      label = "button 3"
     ) \%>\%
       describe_using(descID = "descriptor"), # it's happening here
 
     actionButton(
       inputId = "inp4",
-      label = "button"
+      label = "button 4"
     ),
     actionButton(
       inputId = "inp5",
-      label = "button"
+      label = "button 5"
     ),
 
     div(

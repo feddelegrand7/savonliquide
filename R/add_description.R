@@ -11,6 +11,8 @@
 #' @export
 #'
 #' @examples
+#'
+#' if (interactive()) {
 #' ui <- fluidPage(
 #'   # use Tab and Shift + Tab to navigate between the buttons
 #'   # and see the difference
@@ -47,6 +49,8 @@
 #' server <- function(input, output, session) {}
 #'
 #' shinyApp(ui, server)
+#' }
+
 add_description <- function(element,
                             descID,
                             description,
@@ -90,9 +94,6 @@ add_description <- function(element,
   }
 }
 
-
-
-
 #' Describe an HTML element by another one
 #'
 #' @param element the HTML element to describe
@@ -102,9 +103,34 @@ add_description <- function(element,
 #' @export
 #'
 #' @examples
+#' if (interactive()) {
+#' ui <- fluidPage(
+#'   # use Tab and Shift + Tab to navigate between the buttons
+#'   # and see the difference
 #'
+#'   actionButton(inputId = "inp1",
+#'                label = "button"),
+#'   actionButton(inputId = "inp2",
+#'                label = "button"),
 #'
+#'   actionButton(inputId = "inp3",
+#'                label = "button") %>%
+#'     describe_using(descID = "descriptor"), # it's happening here
 #'
+#'   actionButton(inputId = "inp4",
+#'                label = "button"),
+#'   actionButton(inputId = "inp5",
+#'                label = "button"),
+#'
+#'   div(id = "descriptor",
+#'       "button 3 is just amazing! click on it!!!")
+#' )
+#'
+#' server <- function(input, output, session){}
+#'
+#' shinyApp(ui, server)
+#'
+#' }
 
 describe_using <- function(element, descID) {
 
@@ -119,7 +145,6 @@ describe_using <- function(element, descID) {
     stop("please do not append the descID argument with a '#'")
 
   }
-
 
   htmltools::tagAppendAttributes(
     element,

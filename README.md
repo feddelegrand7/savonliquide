@@ -196,7 +196,7 @@ By default the description will be invisible for non screen-reader users
 but you can set it to be visible by setting the parameter `visible` to
 `TRUE`.
 
-# 2. `describe_using()`
+# 3. `describe_using()`
 
 `describe_using()` relies on a **preexisting** HTML element to describe
 another element. Note that you can use many elements to describe one.
@@ -241,7 +241,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 3. `create_invisible_anchor()`
+# 4. `create_invisible_anchor()`
 
 This functions allows you to create an invisible HTML anchor tag that
 will be heard only by screen-reader users. The anchor will be used to
@@ -280,7 +280,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 4. `make_skiplinks()`
+# 5. `make_skiplinks()`
 
 Often, in heavy website or application, you might want a screen-reader
 user to have the choice to skip superfluous HTML elements and go
@@ -328,7 +328,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 5. `make_tabbable()`
+# 6. `make_tabbable()`
 
 Some HTML elements (for example `buttons` or `anchors`) get focusable by
 default when you hit <Tab> or &lt;SHIFT+Tab&gt; to navigate within a web

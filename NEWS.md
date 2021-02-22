@@ -7,6 +7,8 @@
   * `make_skiplinks()`
   * `make_tabbable()`
 
+* minor bug fixing. 
+
 
 # savonliquide 0.1.0
 

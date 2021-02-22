@@ -169,7 +169,7 @@ shinyApp(ui, server)
 By default the description will be invisible for non screen-reader users but you can set it to be visible by setting the parameter `visible` to `TRUE`.
 
 
-# 2. `describe_using()` 
+# 3. `describe_using()` 
 
 `describe_using()` relies on a **preexisting** HTML element to describe another element. Note that you can use many elements to describe one.
 
@@ -213,7 +213,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 3. `create_invisible_anchor()` 
+# 4. `create_invisible_anchor()` 
 
 This functions allows you to create an invisible HTML anchor tag that will be heard only by screen-reader users. The anchor will be used to redirect them to a particular web page that could be more adapted to their condition. 
 
@@ -250,7 +250,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 4. `make_skiplinks()`
+# 5. `make_skiplinks()`
 
 Often, in heavy website or application, you might want a screen-reader user to have the choice to skip superfluous HTML elements and go directly to the main-content. In such situation, you might consider skiplinks! just try out with the following example: 
 
@@ -296,7 +296,7 @@ server <- function(input, output, session) {}
 shinyApp(ui, server)
 ```
 
-# 5. `make_tabbable()`
+# 6. `make_tabbable()`
 
 Some HTML elements (for example `buttons` or `anchors`) get focusable by default when you hit <Tab> or <SHIFT+Tab> to navigate within a web page/app, you can say that these elements are **tabbable**, in other words the screen-reader focuses on theses elements when you hit tab. When developing a website/app you might consider enabling this feature for elements that are not tabbable by default (for example paragraph and titles) or desabling this feature for elements that are tabbable by default. Consider the following example: 
 

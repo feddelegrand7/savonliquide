@@ -2,14 +2,17 @@
 
 test_that("the function returns a character", {
 
+  testthat::skip_on_cran()
+
   expect_is(object = check_contrast(fg_col = "#21EA06", bg_col = "#483D3D"),
             class = "character")
-
 
 })
 
 
 test_that("check if the function returns the same output when inputing color with and without #", {
+
+  testthat::skip_on_cran()
 
   expect_equivalent(
 

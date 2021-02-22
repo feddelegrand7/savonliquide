@@ -24,14 +24,11 @@ Add a description to an HTML element
 \examples{
 
 if (interactive()) {
-  library(shiny)
-  library(magrittr)
-
   ui <- fluidPage(
     h2("Using a screen reader
-        hit Tab and Shift + Tab to
+        hit <Tab> or <Shift + Tab> to
         navigate between the buttons
-        and stop at button 3 to see the difference"),
+        and stop at button 5 to see the difference"),
 
     actionButton(
       inputId = "inp1",

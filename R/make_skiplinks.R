@@ -63,17 +63,17 @@ make_skiplinks <- function(element,
     htmltools::tags$head(htmltools::tags$style(glue::glue(
       "
       #{id} {{
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: {bg_color};
-      color: {col};
-      padding: 8px;
-      z-index: 9999;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: {bg_color};
+        color: {col};
+        padding: 8px;
+        z-index: 9999;
       }}
 
       #{id}:focus {{
-      top: 0;
+        top: 0;
       }}
       "
     )))

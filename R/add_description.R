@@ -1,5 +1,3 @@
-
-
 #' Add a description to an HTML element
 #'
 #' @param element an HTML element to describe
@@ -13,14 +11,11 @@
 #' @examples
 #'
 #' if (interactive()) {
-#'   library(shiny)
-#'   library(magrittr)
-#'
 #'   ui <- fluidPage(
 #'     h2("Using a screen reader
-#'         hit Tab and Shift + Tab to
+#'         hit <Tab> or <Shift + Tab> to
 #'         navigate between the buttons
-#'         and stop at button 3 to see the difference"),
+#'         and stop at button 5 to see the difference"),
 #'
 #'     actionButton(
 #'       inputId = "inp1",
@@ -74,11 +69,11 @@ add_description <- function(element,
       htmltools::tags$head(htmltools::tags$style(glue::glue(
         "
     #{descID} {{
-    position: absolute;
-    left: -1000px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+      position: absolute;
+      left: -1000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }}
     "
       )))
@@ -98,11 +93,6 @@ add_description <- function(element,
   }
 }
 
-
-
-
-
-
 #' Describe an HTML element by another one
 #'
 #' @param element the HTML element to describe
@@ -114,15 +104,16 @@ add_description <- function(element,
 #'
 #' @examples
 #' if (interactive()) {
-#'   library(shiny)
-#'   library(magrittr)
-#'
 #'   ui <- fluidPage(
-#'
 #'     h2("Using a screen reader
 #'         hit Tab and Shift + Tab to
 #'         navigate between the buttons
-#'         and stop at button 3 to see the difference"),
+#'         and stop at button 2 to see the difference"),
+#'
+#'     div(
+#'       id = "paragraph",
+#'       p("The following paragraph tag will be used as a descriptor")
+#'     ),
 #'
 #'     actionButton(
 #'       inputId = "inp1",
@@ -131,27 +122,10 @@ add_description <- function(element,
 #'     actionButton(
 #'       inputId = "inp2",
 #'       label = "button 2"
-#'     ),
-#'
-#'     actionButton(
-#'       inputId = "inp3",
-#'       label = "button 3"
 #'     ) %>%
-#'       describe_using(descID = "descriptor"), # it's happening here
-#'
-#'     actionButton(
-#'       inputId = "inp4",
-#'       label = "button 4"
-#'     ),
-#'     actionButton(
-#'       inputId = "inp5",
-#'       label = "button 5"
-#'     ),
-#'
-#'     div(
-#'       id = "descriptor",
-#'       "button 3 is just amazing! click on it!!!"
-#'     )
+#'       describe_using(
+#'         descID = "paragraph"
+#'       )
 #'   )
 #'
 #'   server <- function(input, output, session) {}

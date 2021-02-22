@@ -26,11 +26,11 @@ create_invisible_anchor <- function(id, text, href = NULL) {
     htmltools::tags$head(htmltools::tags$style(glue::glue(
     "
     #{id} {{
-    position: absolute;
-    left: -1000px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+      position: absolute;
+      left: -1000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }}
     "
     )))

@@ -7,7 +7,6 @@ Authors@R:
            role = c("aut", "cre"),
            email = "ihaddaden.fodeil@gmail.com")
 Description: Provides a toolbox that allows the user to implement accessibility related concepts. 
-  For more info see <https://webaim.org/resources/contrastchecker/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

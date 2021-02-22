@@ -20,15 +20,16 @@ Describe an HTML element by another one
 }
 \examples{
 if (interactive()) {
-  library(shiny)
-  library(magrittr)
-
   ui <- fluidPage(
-
     h2("Using a screen reader
         hit Tab and Shift + Tab to
         navigate between the buttons
-        and stop at button 3 to see the difference"),
+        and stop at button 2 to see the difference"),
+
+    div(
+      id = "paragraph",
+      p("The following paragraph tag will be used as a descriptor")
+    ),
 
     actionButton(
       inputId = "inp1",
@@ -37,27 +38,10 @@ if (interactive()) {
     actionButton(
       inputId = "inp2",
       label = "button 2"
-    ),
-
-    actionButton(
-      inputId = "inp3",
-      label = "button 3"
     ) \%>\%
-      describe_using(descID = "descriptor"), # it's happening here
-
-    actionButton(
-      inputId = "inp4",
-      label = "button 4"
-    ),
-    actionButton(
-      inputId = "inp5",
-      label = "button 5"
-    ),
-
-    div(
-      id = "descriptor",
-      "button 3 is just amazing! click on it!!!"
-    )
+      describe_using(
+        descID = "paragraph"
+      )
   )
 
   server <- function(input, output, session) {}

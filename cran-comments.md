@@ -4,7 +4,14 @@
 * win-builder (devel)
 
 ## R CMD check results
--- R CMD check results ------- savonliquide 0.1.0 ----
-Duration: 30.6s
+
+-- R CMD check results - savonliquide 0.2.0 ----
+Duration: 40.9s
 
 0 errors √ | 0 warnings √ | 0 notes √
+
+
++ I've added new functions. 
++ I've added new tests. 
++ I've modified the description of the package. 
++ I've used the skip_on_cran function to skip tests that call the API. 

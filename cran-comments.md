@@ -6,7 +6,7 @@
 ## R CMD check results
 
 -- R CMD check results - savonliquide 0.2.0 ----
-Duration: 40.9s
+Duration: 29s
 
 0 errors √ | 0 warnings √ | 0 notes √
 

@@ -1,13 +1,12 @@
 Package: savonliquide
 Title: Accessibility Toolbox for 'R' Users
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person(given = "Mohamed El Fodil",
            family = "Ihaddaden",
            role = c("aut", "cre"),
            email = "ihaddaden.fodeil@gmail.com")
-Description: Allows the user to generate a report from the 'Contrast Checker' API.
-  The report generates a contrast ratio that will be useful when considering colors accessibility.
+Description: Provides a toolbox that allows the user to implement accessibility related concepts. 
   For more info see <https://webaim.org/resources/contrastchecker/>.
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -36,6 +36,9 @@ or you can install the development version from `Github` with:
 ``` r
 remotes::install_github("feddelegrand7/savonliquide")
 ```
+
+### List of functions: 
+-----------------------------------
 - [1. `check_contrast()` and `check_contrast_raw()`](#%201.%20`check_contrast()`%20and%20`check_contrast_raw()`)
 - [2. `add_description()`](#%202.%20`add_description()`)
 - [3. `describe_using()`](#%203.%20`describe_using()`)

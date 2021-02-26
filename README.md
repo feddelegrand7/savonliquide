@@ -162,9 +162,9 @@ paste0("This is a good Contrast Ratio ",
 The `add_description()` function works in RMarkdown documents (HTML
 output) and Shiny application. It creates an HTML element that will be
 used to describe another element. When a screen-reader user focuses on
-the former, he will hear the vocal description provided by the latter.
+the latter, he will hear the vocal description provided by the form (the HTML element created by the function).
 Let’s dig into an example in Shiny. Note that in order to experiment the
-following example, you must install and enable a screen reader of your
+following example, you must install and enable the screen reader of your
 choice (I’m using the Chrome Vox Google Chrome extension).
 
 ``` r

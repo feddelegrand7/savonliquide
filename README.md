@@ -36,12 +36,12 @@ or you can install the development version from `Github` with:
 ``` r
 remotes::install_github("feddelegrand7/savonliquide")
 ```
-- [1. `check_contrast()` and `check_contrast_raw()`](#-1.-`check_contrast()`-and-`check_contrast_raw()`)
-- [2. `add_description()`](#-2.-`add_description()`)
-- [3. `describe_using()`](#-3.-`describe_using()`)
-- [4. `create_invisible_anchor()`](#-4.-`create_invisible_anchor()`)
-- [5. `make_skiplinks()`](#-5.-`make_skiplinks()`)
-- [6. `make_tabbable()`](#-6.-`make_tabbable()`)
+- [1. `check_contrast()` and `check_contrast_raw()`](#%201.%20`check_contrast()`%20and%20`check_contrast_raw()`)
+- [2. `add_description()`](#%202.%20`add_description()`)
+- [3. `describe_using()`](#%203.%20`describe_using()`)
+- [4. `create_invisible_anchor()`](#%204.%20`create_invisible_anchor()`)
+- [5. `make_skiplinks()`](#%205.%20`make_skiplinks()`)
+- [6. `make_tabbable()`](#%206.%20`make_tabbable()`)
 
 # 1. `check_contrast()` and `check_contrast_raw()`
 
